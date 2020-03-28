@@ -20,16 +20,45 @@ Example Output
 '''
 
 #%%
+# my answer
+# def openOrSenior(data):
+#     # to be a senior you need to be 55 and have a handicap >7
+#     rList = []
+
+#     for i in range(len(data)):
+#             if data[i][0] >= 55 and data[i][1] >  7: rList.append("Senior")
+#             else: rList.append("Open") 
+        
+#     return rList
+# data = [[45, 12],[55,21],[19, -2],[104, 20]]
+
+# r = openOrSenior(data)
+# r
+
+
+'''
+
+Best answer 
+  return ["Senior" if age >= 55 and handicap >= 8 else "Open" for (age, handicap) in data]
+
+def openOrSenior(data):
+    return ["Senior" if age >= 55 and handicap >= 8 else "Open" for (age, handicap) in data]
+'''
+
 def openOrSenior(data):
     # to be a senior you need to be 55 and have a handicap >7
     rList = []
 
-    for i in range(len(data)):
-            if data[i][0] >= 55 and data[i][1] >  7: rList.append("Senior")
-            else: rList.append("Open") 
+    for (age, handicap) in data:
+        print (age, handicap)
+        if age >= 55 and handicap >  7: rList.append("Senior")
+
+        else: rList.append("Open") 
         
     return rList
-data = [[45, 12],[55,21],[19, -2],[104, 20]]
+data = [[45, 12,34]]
 
 r = openOrSenior(data)
 r
+
+
