@@ -19,5 +19,3 @@ def order(sentence):
     for 
 sentence = "is2 Thi1s T4est 3a" 
 order(sentence)
-
-# %%
