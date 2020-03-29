@@ -27,6 +27,15 @@ Test.assert_equals(persistence(999), 4)
 
 https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/python
 
+
+# best voted 
+import operator
+def persistence(n):
+    i = 0
+    while n>=10:
+        n=reduce(operator.mul,[int(x) for x in str(n)],1)
+        i+=1
+    return i
 '''
 #%%
 # my attempt
