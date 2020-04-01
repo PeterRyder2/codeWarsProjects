@@ -14,18 +14,32 @@ findNextSquare(625) --> returns 676
 findNextSquare(114) --> returns -1 since 114 is not a perfect
 
 https://www.codewars.com/kata/56269eb78ad2e4ced1000013/python 
+
+best answer
+
+def find_next_square(sq):
+    root = sq ** 0.5
+    if root.is_integer():
+        return (root + 1)**2
+    return -1
 '''
 from math import sqrt 
+# def find_next_square(sq):
+#     # Return the next square if sq is a square, -1 otherwise
+#     if not sqrt(sq).is_integer(): return -1
+#     else:
+#         sq+=1
+#         while True:
+#             if not sqrt(sq).is_integer():sq+=1
+#             else: return sq
+
+
 def find_next_square(sq):
-    # Return the next square if sq is a square, -1 otherwise
-    if not sqrt(sq).is_integer(): return -1
-    else:
-        sq+=1
-        while True:
-            if not sqrt(sq).is_integer():sq+=1
-            else: return sq
+    root = sq ** 0.5
+    if root.is_integer():
+        return (root + 1)**2
+    return -1
 
-
-num = 114
+num = 121
 r = find_next_square(num)
 print(r)
